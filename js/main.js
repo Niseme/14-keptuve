@@ -1,19 +1,12 @@
-const keptuve = document.querySelector('.keptuve');
-const lekste = document.querySelector('div:nth-of-type(2)');
 
-if (!keptuve) {
-    console.error('neradau keptuves')
+const skyles = document.querySelectorAll('.skyle');
+const jungikliai = document.querySelectorAll('.jungiklis');
+
+for (let i = 0; i < jungikliai.length; i++) {
+    const jungiklis = jungikliai[i];
+
+    jungiklis.addEventListener('click', () => {
+        skyles[i].classList.toggle('kaista');
+    })
+
 }
-if (!lekste) {
-    console.error('neradau lekstes')
-}
-
-let blynuKiekis = 0;
-
-keptuve.addEventListener('click', () => {
-
-    lekste.innerText = `${++blynuKiekis} blynai`
-
-})
-
-
